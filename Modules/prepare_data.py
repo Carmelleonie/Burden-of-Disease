@@ -1,8 +1,11 @@
+import os
 import pandas as pd
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data", "cause_of_deaths.csv")
 def prepare_data():
 	# Select rows of a specific country
-	df = pd.read_csv("Cause_of_death_in_the_world/data/cause_of_deaths.csv")
+	df = pd.read_csv(DATA_PATH)
 	ids = ['Country/Territory', 'Code', 'Year']
 	causes = ['Meningitis', 'Alzheimer\'s Disease and Other Dementias',
           'Parkinson\'s Disease', 'Nutritional Deficiencies', 'Malaria',
