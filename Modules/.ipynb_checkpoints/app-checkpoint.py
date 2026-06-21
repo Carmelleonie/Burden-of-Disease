@@ -4,6 +4,7 @@ from app_layout import create_app_layout
 from callback import app_callback_functions
 # Instantiate an app
 app = Dash(__name__, assets_folder="web_style", external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 app.title="Causes of Deaths Dashboard"
 
 # Build the app layout
